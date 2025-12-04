@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ مستقبل العمل الأونلاين - منصة الانطلاق ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* الخطوط والألوان الأساسية (ثبات واحترافية) */
+        :root {
+            --primary-blue: #007bff; /* أزرق أساسي عميق */
+            --accent-green: #28a745; /* أخضر تميز */
+            --light-bg: #f0f7ff; /* خلفية سحابية */
+            --shadow-strong: 0 15px 30px rgba(0, 0, 0, 0.2);
+            --border-radius-xl: 30px;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-image: radial-gradient(circle at top left, var(--light-bg), #dbefff);
+            color: #333;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* رأس الصفحة - تصميم موجي (تم تحسينه) */
+        .header {
+            background: linear-gradient(135deg, #0056b3 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 50px 20px 80px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-strong);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: var(--light-bg);
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 3.8em;
+            margin: 0;
+            letter-spacing: 1px;
+            color: #ffeb3b; /* أصفر فلاش */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            font-weight: 800;
+            margin-top: 10px;
+            color: #bbdefb;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 20;
+        }
+
+        /* بطاقة العمل (مجسمة ولامعة - بدون كلمة "حقيقي") */
+        .job-card {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: var(--border-radius-xl);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+            text-align: right;
+            border: 6px solid #ff9800; /* تغيير لون الحد إلى البرتقالي لكسر رتابة الأزرق */
+            transform: perspective(1000px) rotateX(1deg); 
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .job-card:hover {
+            transform: perspective(1000px) rotateX(0deg) scale(1.01);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            padding-bottom: 20px;
+            font-weight: 900;
+            font-size: 2.5em;
+            border-bottom: 8px double #ff9800; /* خط مزدوج برتقالي */
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        /* قائمة الشروط (بطاقات عائمة - زيادة التباعد) */
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; /* زيادة المسافة بين الشروط */
+            margin-top: 30px;
+        }
+
+        .req-item {
+            padding: 25px;
+            border-radius: 18px;
+            font-size: 1.2em;
+            font-weight: 800;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            background-color: #e3f2fd; /* لون البطاقة (لون الخلفية الفاتح) */
+            border-left: 10px solid var(--primary-blue);
+            text-align: right;
+            transition: all 0.3s ease;
+        }
+
+        .req-item:hover {
+            background-color: #d1e5f8; 
+            border-left-color: var(--accent-green);
+            transform: translateY(-5px) rotate(1deg); /* لمسة جديدة */
+        }
+
+        .req-item span.icon {
+            font-size: 1.8em;
+            margin-left: 12px;
+            color: var(--primary-blue);
+            animation: pulse 1.5s infinite; 
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* زر الواتساب الخارق (تأثير النيون) */
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 60px;
+            padding: 22px 55px;
+            background-color: var(--accent-green);
+            color: white;
+            font-size: 1.8em;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 60px;
+            transition: all 0.5s ease;
+            box-shadow: 0 0 15px var(--accent-green), 0 0 30px var(--accent-green); 
+            border: 3px solid white;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1a7836;
+            transform: scale(1.1) rotate(-1deg); /* دوران خفيف عند التحويم */
+            box-shadow: 0 0 25px var(--accent-green), 0 0 50px var(--accent-green);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 يوجد عمل لدينا أونلاين للشباب والبنات</h1>
+        <p class="subtitle">ابدأ مسيرتك المهنية الآن - فرصتك للانطلاق نحو الدخل الإضافي</p>
+    </div>
+
+    <div class="container">
+        <div class="job-card">
+            <p style="font-size: 1.6em; color: #444; font-weight: 800; margin-bottom: 50px;">
+                ندعوك للانضمام إلى فريقنا سريع النمو! عمل مرن بالكامل، ومهام بسيطة تناسب الجميع.
+            </p>
+            
+            <h2>✅ المتطلبات للانضمام (بوابة القبول):</h2>
+            
+            <div class="requirements-grid">
+                <div class="req-item">
+                    <span class="icon">✨</span>
+                    **أكبر من 16 سنه.** (السن القانوني لبدء العمل)
+                </div>
+                
+                <div class="req-item">
+                    <span class="icon">🖥️</span>
+                    **وجود هاتف محمول أو حاسوب.** (الأداة الأساسية لإنجاز المهام)
+                </div>
+
+                <div class="req-item">
+                    <span class="icon">💵</span>
+                    **وجود فودافون كاش معك لاستلام الراتب.** (نظام دفع آمن ومُتاح)
+                </div>
+
+                <div class="req-item">
+                    <span class="icon">⏱️</span>
+                    **تخصيص 3 ساعات عمل يوميًا على الأقل.** (لتحقيق أفضل نتائج ممكنة)
+                </div>
+
+                <div class="req-item">
+                    <span class="icon">🤝</span>
+                    **مهارات تواصل أساسية وقابلية للتعلم السريع.** (نحن نوفر التدريب اللازم)
+                </div>
+
+                <div class="req-item">
+                    <span class="icon">📶</span>
+                    **توفر اتصال إنترنت مستقر عالي الجودة.** (لضمان كفاءة العمل عن بعد)
+                </div>
+            </div>
+
+            <a href="https://wa.me/201212476804" target="_blank" class="whatsapp-btn">
+                <span>ابدأ الآن وتواصل مباشرة عبر واتساب!</span>
+                🚀
+            </a>
+            
+            <p style="margin-top: 50px; font-style: italic; color: #666; font-size: 1.2em; border-top: 1px dashed #ccc; padding-top: 20px;">
+                سنبدأ العمل فور إتمام إجراءات القبول. لا تتردد في الانضمام!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
